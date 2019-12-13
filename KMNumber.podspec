@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KMNumber'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of KMNumber.'
+  s.summary          = 'KMNumber用于精确计算'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+KMNumber是一个用于精确计算的库，来数字位数和精度较高的算数运算。
                        DESC
 
   s.homepage         = 'https://github.com/Kimlon/KMNumber'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Kimlon' => 'yuanjinlong@wbf.io' }
+  s.author           = { 'Kimlon' => 'lelebabyboy@tom.com' }
   s.source           = { :git => 'https://github.com/Kimlon/KMNumber.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'KMNumber/Classes/**/*'
   
