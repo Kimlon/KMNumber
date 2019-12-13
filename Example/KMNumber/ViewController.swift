@@ -15,27 +15,95 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // normal calculate
+        normalCalculate()
         
-//        let _ = KMNumber("0.1212213444567890122221112121232323343454656575745")
-//        let _ = KMNumber("哈哈")
-//        let _ = KMNumber("1.哈哈")
-//        let _ = KMNumber("哈哈.12")
-//        let _ = KMNumber("哈哈100.12")
-//        let _ = KMNumber("12.34op56")
-        
-        let n1 = KMNumber("天啊")
-        let n2 = KMNumber("3.1")
-        
-        print(n1.calculate(operator: .add, aNumber: n2, roundingMode: .down, decimal: 2))
-        print(n1.calculate(operator: .subtract, aNumber: n2, roundingMode: .down, decimal: 3))
-        print(n1.calculate(operator: .multiply, aNumber: n2, roundingMode: .up, decimal: 4))
-        print(n1.calculate(operator: .divide, aNumber: n2, roundingMode: .plain, decimal: 5))
+        // adnormal calculate
+        adnormalCalculate()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func normalCalculate() -> Void {
+        print("normal calculate \n")
+        
+        let n1 = KMNumber("100000")
+        let n11 = KMNumber("101")
+        let result1 = n1 + n11
+        let result11 = n1.calculate(operator: .add, aNumber: n11)
+        let result111 = n1.calculate(operator: .add, aNumber: n11, roundingMode: .down, decimal: 0)
+        print("+", result1, result11, result111)
+        /*
+         100101
+         100101
+         100101
+         */
+        
+        
+        let n2 = KMNumber("100")
+        let n22 = KMNumber("1.2356784901")
+        let result2 = n2 - n22
+        let result22 = n2.calculate(operator: .subtract, aNumber: n22)
+        let result222 = n2.calculate(operator: .subtract, aNumber: n22, roundingMode: .up, decimal: 4)
+        print("-", result2, result22, result222)
+        /*
+         98.7643215099
+         98.7643215099
+         98.7644
+         */
+        
+        let n3 = KMNumber("100.00100100100")
+        let n33 = KMNumber("1.1101101101")
+        let result3 = n3 * n33
+        let result33 = n3.calculate(operator: .multiply, aNumber: n33)
+        let result333 = n3.calculate(operator: .multiply, aNumber: n33, roundingMode: .plain)
+        print("*", result3, result33, result333)
+        /*
+         111.0121222313303202101
+         111.0121222313303202101
+         111.0121222313303202101
+         */
+        
+        let n4 = KMNumber("100.01")
+        let n44 = KMNumber("3.3")
+        let result4 = n4 / n44
+        let result44 = n4.calculate(operator: .divide, aNumber: n44)
+        let result444 = n4.calculate(operator: .divide, aNumber: n44, roundingMode: .bankers, decimal: 10)
+        print("/", result4, result44, result444)
+        /*
+         30.3060606060606060606060606060606060606
+         30.3060606060606060606060606060606060606
+         30.3060606061
+         */
     }
-
+    
+    func adnormalCalculate() -> Void {
+        print("adnormal calculate \n")
+        
+        let n1 = KMNumber("12.3 4 50 6")
+        let n11 = KMNumber("100")
+        print(n1 + n11)
+        // 112.34506
+        
+        
+        let n2 = KMNumber("12.3 4 50 6hello")
+        let n22 = KMNumber("100")
+        print(n2 + n22)
+        // 112.34506
+        
+        
+        let n3 = KMNumber("error100")
+        let n33 = KMNumber("1.1234")
+        print(n3 * n33)
+        // 0
+        
+        
+        let n4 = KMNumber("zero")
+        let n44 = KMNumber("0")
+        print(n4 / n44)
+        /*
+         "calculate error - NaN"
+         0
+         */
+        
+    }
 }
 
