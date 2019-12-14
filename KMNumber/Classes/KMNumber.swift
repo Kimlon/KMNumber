@@ -10,7 +10,7 @@ import Foundation
 public struct KMNumber {
     /// max decimal
     static public let MaxDecimal: Int = Int(Int16.max)
-    
+    /// +-*/
     public enum OperatorType {
         case add, subtract, multiply, divide
     }
@@ -38,6 +38,40 @@ public struct KMNumber {
     
     static public func /(a: KMNumber, b: KMNumber) -> KMNumber {
         return a.calculate(operator: .divide, aNumber: b)
+    }
+    
+    static public func >(a: KMNumber, b: KMNumber) -> Bool {
+        a.value.isGreater(than: b.value)
+    }
+    
+    static public func <(a: KMNumber, b: KMNumber) -> Bool {
+        let result = a.value.compare(to: b.value)
+        switch result {
+        case .orderedAscending:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    static public func ==(a: KMNumber, b: KMNumber) -> Bool {
+        let result = a.value.compare(to: b.value)
+        switch result {
+        case .orderedSame:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    static public func !=(a: KMNumber, b: KMNumber) -> Bool {
+        let result = a.value.compare(to: b.value)
+        switch result {
+        case .orderedSame:
+            return false
+        default:
+            return true
+        }
     }
     
     /// 算数运算

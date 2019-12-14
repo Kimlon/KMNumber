@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KMNumber'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'KMNumber用于精确计算'
 
 # This description is used to generate tags and improve search results.
