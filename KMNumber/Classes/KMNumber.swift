@@ -7,6 +7,10 @@
 
 import Foundation
 
+public protocol KMNumberDecimalFormatter {
+    mutating func decimalFormatter(_ decimal: Int, mode: NSDecimalNumber.RoundingMode) -> Void
+}
+
 public struct KMNumber {
     /// max decimal
     static public let MaxDecimal: Int = Int(Int16.max)
@@ -19,11 +23,14 @@ public struct KMNumber {
         return _value
     }
     
-    private let _value: String
+    private var _value: String
     public init(_ value: String) {
         _value = value.withoutSpacesAndNewLines
     }
-    
+}
+
+// MARK: - ################################ calculate ##################################
+extension KMNumber {
     static public func +(a: KMNumber, b: KMNumber) -> KMNumber {
         return a.calculate(operator: .add, aNumber: b)
     }
@@ -39,7 +46,10 @@ public struct KMNumber {
     static public func /(a: KMNumber, b: KMNumber) -> KMNumber {
         return a.calculate(operator: .divide, aNumber: b)
     }
-    
+}
+
+// MARK: - ################################ compare ##################################
+extension KMNumber {
     static public func >(a: KMNumber, b: KMNumber) -> Bool {
         a.value.isGreater(than: b.value)
     }
@@ -73,14 +83,17 @@ public struct KMNumber {
             return true
         }
     }
-    
+}
+
+// MARK: - ################################ calculate ##################################
+extension KMNumber {
     /// 算数运算
     /// - Parameters:
     ///   - operator: +-*/
     ///   - aNumber: 被+-*/的数字
     ///   - roundingMode: plain-四舍五入；down-向下取整；up-向上取整；bankers-在四舍五入的基础上，加上末尾数为5时，变成偶数的规则（1.25->1.2; 1.35->1.4）；默认.plain
     ///   - decimal: 精度；默认MaxDecimal
-    public func calculate(operator: OperatorType, aNumber: KMNumber, roundingMode: NSDecimalNumber.RoundingMode = .plain, decimal: Int = KMNumber.MaxDecimal) -> KMNumber {
+    public func calculate(operator: OperatorType, aNumber: KMNumber, roundingMode: NSDecimalNumber.RoundingMode = .plain, decimal: Int = KMNumber.MaxDecimal, decimalFormatter: Bool = false) -> KMNumber {
         
         var newValue = ""
         switch `operator` {
@@ -93,7 +106,12 @@ public struct KMNumber {
         case .divide:
             newValue = value.dividing(by: aNumber.value, withRoundingMode: roundingMode, withDecimal: decimal)
         }
-        return KMNumber(newValue)
+        
+        var result = KMNumber(newValue)
+        if decimalFormatter {
+            result.decimalFormatter(decimal)
+        }
+        return result
     }
 }
 
@@ -103,6 +121,39 @@ extension KMNumber: CustomStringConvertible {
     }
 }
 
+extension KMNumber: KMNumberDecimalFormatter {
+    
+    /// 精度格式化，精度不足补0
+    mutating public func decimalFormatter(_ decimal: Int, mode: NSDecimalNumber.RoundingMode = .down) {
+        var decimal = decimal
+        
+        if decimal < 0 {
+            decimal = 0
+        }
+        var tempValue = _value
+        if tempValue.isEmpty {
+            return
+        }
+
+        if let dotIndex = tempValue.firstIndex(of: ".") {
+            if let startIndex = tempValue.index(dotIndex, offsetBy: 1, limitedBy: tempValue.endIndex) {
+                let s = tempValue[startIndex..<tempValue.endIndex]
+                let count = decimal - s.count
+                if count > 0 {
+                    tempValue.append(String(repeating: "0", count: count))
+                } else if count < 0 {
+                    tempValue = KMNumber(tempValue).calculate(operator: .add, aNumber: KMNumber("0"), roundingMode: mode, decimal: decimal, decimalFormatter: true).value
+                }
+            }
+        } else {
+            tempValue.append(".")
+            tempValue.append(String(repeating: "0", count: decimal))
+        }
+        _value = tempValue
+    }
+}
+
+// MARK: - #############################################################################
 fileprivate extension String {
     
     /// 加
@@ -172,13 +223,7 @@ fileprivate extension String {
     private func prepareNumbersAndHandler(_ a: String, _ b: String, _ mode: NSDecimalNumber.RoundingMode, _ decimal: Int) -> (NSDecimalNumber, NSDecimalNumber, NSDecimalNumberHandler) {
         
         let numbers = prepareNumbers(a, b)
-        
-        var _decimal: Int16 = 0
-        if decimal > Int16.max {
-            _decimal = Int16.max
-        } else {
-            _decimal = Int16(decimal)
-        }
+        let _decimal: Int16 = decimal.validateDecimal
         
         let handler = NSDecimalNumberHandler(roundingMode: mode, scale: _decimal, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         
@@ -204,6 +249,20 @@ fileprivate extension String {
         } else {
             return self
         }
+    }
+}
+
+fileprivate extension Int {
+    var validateDecimal: Int16 {
+        var _decimal: Int16 = 0
+        if self > Int16.max {
+            _decimal = Int16.max
+        } else if self <= 0 {
+            _decimal = 0
+        } else {
+            _decimal = Int16(self)
+        }
+        return _decimal
     }
 }
 

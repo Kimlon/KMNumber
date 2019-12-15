@@ -17,7 +17,7 @@
 		37CF04C8031428B9A6EF7EB70B6E5477 /* Pods-KMNumber_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D463753E1331A8CD03E2A96909635F /* Pods-KMNumber_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39F07A09D7FA9950437EFE22AFFA1688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		48B57D5B43755D8F61FD3D67B6B8033D /* KMNumber-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F900249F5F28BF4784636C7CE77A0AED /* KMNumber-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48B57D5B43755D8F61FD3D67B6B8033D /* KMNumber-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E66D34AC0CCE02C471ECDB2714B5DA /* KMNumber-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */; };
 		75190C6FE3FE959CBC9C9C10DB546891 /* Pods-KMNumber_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF05723272EEBAE1B8522124880B937 /* Pods-KMNumber_Example-dummy.m */; };
@@ -26,7 +26,7 @@
 		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 88EE4F95531D217A595AA8D85A24FA39 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A97D81FF327B22050F7117D86A55229 /* Pods-KMNumber_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFC4C6E70F1974734B4FE77EFBB63530 /* Pods-KMNumber_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D2DF1ABBBD85F5E079D7D0EB5479BC /* SwiftSupport.swift */; };
-		A1B52D2F8B12080DA5A6A938B8EB591F /* KMNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD804A25699CA9F225B6D17266E408F /* KMNumber.swift */; };
+		A1B52D2F8B12080DA5A6A938B8EB591F /* KMNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CBB04D1D7653245D74748791A63A05 /* KMNumber.swift */; };
 		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = AA172EA1A198EEFBE0794EACF7993C02 /* UIImage+Snapshot.m */; };
 		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EA718A72E676291836EBB46B85242155 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -37,7 +37,7 @@
 		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = A25844C26701FA4BCAEF64150B56777F /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E621F768263424D9C5C35D58513625CB /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8B2715B5AF6BDAB9D40C62A9FD189CC /* Pods-KMNumber_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F32AB3CDCF4109D5E15C5C2EF7CFED /* Pods-KMNumber_Tests-dummy.m */; };
-		FEA4BCBADD3F120FC6AB3F3F80A8F165 /* KMNumber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A42463F08C06A8FA9413B82BA35A4 /* KMNumber-dummy.m */; };
+		FEA4BCBADD3F120FC6AB3F3F80A8F165 /* KMNumber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B874A4980412F65EC313C7B07819DC /* KMNumber-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,24 +65,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0086645766C2CB25200BF04EA2B8519A /* KMNumber-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KMNumber-Info.plist"; sourceTree = "<group>"; };
 		0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		0F61B0E2435A552FB905BD55D85B39B9 /* KMNumber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KMNumber.xcconfig; sourceTree = "<group>"; };
 		11E9F5E32E04C05CEEF07F52C6F84375 /* Pods-KMNumber_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KMNumber_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		13C8BBFE2D9E3A9C566221B1DE04E91C /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		1A7A42463F08C06A8FA9413B82BA35A4 /* KMNumber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KMNumber-dummy.m"; sourceTree = "<group>"; };
 		1B8ABEEA76ECDF1975B6D0787700F929 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		1EE6A94FFC938CF488DEB1241B2A41BB /* Pods-KMNumber_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNumber_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		22E239BD1B2826BBD293CDC7FD07687F /* KMNumber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KMNumber.xcconfig; sourceTree = "<group>"; };
+		2426A3B36009AF43B92A97F8C96990AC /* KMNumber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMNumber-prefix.pch"; sourceTree = "<group>"; };
 		277C00AE14BAB3EC05A36544FF9286FD /* KMNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KMNumber.framework; path = KMNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2895E397C12C7113A0CD6ADDB7050E52 /* KMNumber-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMNumber-prefix.pch"; sourceTree = "<group>"; };
 		2D7D825149B69096A9A62DD566F3A7C5 /* Pods_KMNumber_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KMNumber_Example.framework; path = "Pods-KMNumber_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF05723272EEBAE1B8522124880B937 /* Pods-KMNumber_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KMNumber_Example-dummy.m"; sourceTree = "<group>"; };
 		3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		3E29C50D3CDB46CBCBD20AFA13EB3D8D /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		418E0471655A8CDB5EB2C290498D2FD3 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
+		41E66D34AC0CCE02C471ECDB2714B5DA /* KMNumber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMNumber-umbrella.h"; sourceTree = "<group>"; };
 		43A2B48C84F80CE16A0F469B4FC39604 /* Pods-KMNumber_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNumber_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F5D2F3408FFF5BCA0E9BF6B3EF14D4C /* Pods-KMNumber_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KMNumber_Example.modulemap"; sourceTree = "<group>"; };
-		52E017E9D340DE1F2F9748922B02D9E1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		55AE1C5C16BE92711BDEBACF00B22F9C /* KMNumber-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KMNumber-Info.plist"; sourceTree = "<group>"; };
 		5A4ECE8F7E1BB43AC33788124D7650C8 /* Pods-KMNumber_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KMNumber_Example-Info.plist"; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -93,23 +92,24 @@
 		7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		82D2DF1ABBBD85F5E079D7D0EB5479BC /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		82F32AB3CDCF4109D5E15C5C2EF7CFED /* Pods-KMNumber_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KMNumber_Tests-dummy.m"; sourceTree = "<group>"; };
+		87CBB04D1D7653245D74748791A63A05 /* KMNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KMNumber.swift; path = KMNumber/Classes/KMNumber.swift; sourceTree = "<group>"; };
 		88EE4F95531D217A595AA8D85A24FA39 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		896F136723FD08A92236B86896481037 /* Pods-KMNumber_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KMNumber_Tests.modulemap"; sourceTree = "<group>"; };
 		8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8F1FE5C23F1BC485C54B92C32E78391F /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		985552DAC6058858E105FB10F6ACA8EE /* Pods-KMNumber_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KMNumber_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		98FD387DFA194173633270BAF1BCD859 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		99E85B740FF70D5EC701FC5E1348E836 /* KMNumber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KMNumber.modulemap; sourceTree = "<group>"; };
 		9A9D10E213923C695EF5901CD294F92D /* Pods-KMNumber_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KMNumber_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DD804A25699CA9F225B6D17266E408F /* KMNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KMNumber.swift; path = KMNumber/Classes/KMNumber.swift; sourceTree = "<group>"; };
 		A231FE90D0DB97C83C7AD43DFBCBBFF3 /* Pods-KMNumber_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KMNumber_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A25844C26701FA4BCAEF64150B56777F /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		AA172EA1A198EEFBE0794EACF7993C02 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		AD0B81AC7DF4855803A0FA70985F8A99 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		AD7431817DFC43275B10930079820EAE /* Pods-KMNumber_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KMNumber_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B2EF797F4E95EC422D31F612A0390486 /* KMNumber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KMNumber.modulemap; sourceTree = "<group>"; };
+		B9B874A4980412F65EC313C7B07819DC /* KMNumber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KMNumber-dummy.m"; sourceTree = "<group>"; };
 		BC65CCB6901A47EC8BE3CF9CE7966BFF /* Pods-KMNumber_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNumber_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C502E3A1290884871652DEFC1B24E0EF /* KMNumber.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KMNumber.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CC38A4E9AC989B8B2357668AF10B4B5F /* KMNumber.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KMNumber.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		D4D463753E1331A8CD03E2A96909635F /* Pods-KMNumber_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KMNumber_Example-umbrella.h"; sourceTree = "<group>"; };
 		D99882A7C7C1DEC1CF91BD08E043F205 /* Pods-KMNumber_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KMNumber_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -120,9 +120,8 @@
 		E621F768263424D9C5C35D58513625CB /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		EA19C8F1F7FBDBA3C81BB79367A6A8A0 /* Pods-KMNumber_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KMNumber_Tests-Info.plist"; sourceTree = "<group>"; };
 		EA718A72E676291836EBB46B85242155 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		EB0AE02ACD7A211A3083B5F361EF78AA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		EF53D290F564A9B10CEF56C9DC2010F2 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		F900249F5F28BF4784636C7CE77A0AED /* KMNumber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMNumber-umbrella.h"; sourceTree = "<group>"; };
+		F6032494EE5AEA13FC51D665EC335522 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +188,20 @@
 			path = "../Target Support Files/FBSnapshotTestCase";
 			sourceTree = "<group>";
 		};
+		4A0C325459B72CAFB598284BDAB3FCE6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2EF797F4E95EC422D31F612A0390486 /* KMNumber.modulemap */,
+				0F61B0E2435A552FB905BD55D85B39B9 /* KMNumber.xcconfig */,
+				B9B874A4980412F65EC313C7B07819DC /* KMNumber-dummy.m */,
+				55AE1C5C16BE92711BDEBACF00B22F9C /* KMNumber-Info.plist */,
+				2426A3B36009AF43B92A97F8C96990AC /* KMNumber-prefix.pch */,
+				41E66D34AC0CCE02C471ECDB2714B5DA /* KMNumber-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KMNumber";
+			sourceTree = "<group>";
+		};
 		7472551D7E027E13B2752968E807ED98 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,15 +230,13 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
-		85A4CBAC999C11CAB5425715592C5060 /* KMNumber */ = {
+		88D97DB3AEC8F5C8924A28FBBB08F49E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				9DD804A25699CA9F225B6D17266E408F /* KMNumber.swift */,
-				B2F0DE12D965129B902EBC5E4670932D /* Pod */,
-				C5008599EFCB1DAE3256F28961A03225 /* Support Files */,
+				CC38A4E9AC989B8B2357668AF10B4B5F /* KMNumber.podspec */,
+				F6032494EE5AEA13FC51D665EC335522 /* README.md */,
 			);
-			name = KMNumber;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		901852BE7932484040BDEDD5FD64BCC8 /* Pods-KMNumber_Tests */ = {
@@ -277,22 +288,23 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		B2F0DE12D965129B902EBC5E4670932D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C502E3A1290884871652DEFC1B24E0EF /* KMNumber.podspec */,
-				EB0AE02ACD7A211A3083B5F361EF78AA /* LICENSE */,
-				52E017E9D340DE1F2F9748922B02D9E1 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		B624249E58D68A222122B3CF5485B7B8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				85A4CBAC999C11CAB5425715592C5060 /* KMNumber */,
+				B791F3A834E1A443013D0B75EA212C8C /* KMNumber */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B791F3A834E1A443013D0B75EA212C8C /* KMNumber */ = {
+			isa = PBXGroup;
+			children = (
+				87CBB04D1D7653245D74748791A63A05 /* KMNumber.swift */,
+				88D97DB3AEC8F5C8924A28FBBB08F49E /* Pod */,
+				4A0C325459B72CAFB598284BDAB3FCE6 /* Support Files */,
+			);
+			name = KMNumber;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
@@ -301,20 +313,6 @@
 				7DE5752EED0A4C4A430975244947611A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C5008599EFCB1DAE3256F28961A03225 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				99E85B740FF70D5EC701FC5E1348E836 /* KMNumber.modulemap */,
-				22E239BD1B2826BBD293CDC7FD07687F /* KMNumber.xcconfig */,
-				1A7A42463F08C06A8FA9413B82BA35A4 /* KMNumber-dummy.m */,
-				0086645766C2CB25200BF04EA2B8519A /* KMNumber-Info.plist */,
-				2895E397C12C7113A0CD6ADDB7050E52 /* KMNumber-prefix.pch */,
-				F900249F5F28BF4784636C7CE77A0AED /* KMNumber-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/KMNumber";
 			sourceTree = "<group>";
 		};
 		C996CEF13353BC19BC6E1ADAC6263AE8 /* Pods-KMNumber_Example */ = {
@@ -666,7 +664,7 @@
 		};
 		19A0797EC091D5296A7A2E55792E7D51 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22E239BD1B2826BBD293CDC7FD07687F /* KMNumber.xcconfig */;
+			baseConfigurationReference = 0F61B0E2435A552FB905BD55D85B39B9 /* KMNumber.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -859,7 +857,7 @@
 		};
 		C07732D9D33E6ED70196D04E3FCB6A9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22E239BD1B2826BBD293CDC7FD07687F /* KMNumber.xcconfig */;
+			baseConfigurationReference = 0F61B0E2435A552FB905BD55D85B39B9 /* KMNumber.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

@@ -1,6 +1,6 @@
 {
   "name": "KMNumber",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "KMNumber用于精确计算",
   "description": "KMNumber是一个用于精确计算的库，来数字位数和精度较高的算数运算。",
   "homepage": "https://github.com/Kimlon/KMNumber",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Kimlon/KMNumber.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "10.0"

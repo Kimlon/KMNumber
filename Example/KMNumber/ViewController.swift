@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         adnormalCalculate()
         
         compare()
+        
+        decimalTest()
     }
 
     func normalCalculate() -> Void {
@@ -125,6 +127,17 @@ class ViewController: UIViewController {
             let r111 = n1 < n11
             let r1111 = n1 != n11
             print(r1, r11, r111, r1111)
+        }
+    }
+    
+    func decimalTest() -> Void {
+        
+        let arr: [KMNumber] = [KMNumber("100"), KMNumber("100.12"), KMNumber("100.125"), KMNumber("100.100000012345312")]
+        
+        arr.forEach { (number) in
+            var temp = number
+            temp.decimalFormatter(2, mode: .plain)
+            print(temp)
         }
     }
 }
