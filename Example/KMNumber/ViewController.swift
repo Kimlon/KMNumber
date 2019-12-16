@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         compare()
         
         decimalTest()
+        
+        trimTailTest()
     }
 
     func normalCalculate() -> Void {
@@ -131,12 +133,24 @@ class ViewController: UIViewController {
     }
     
     func decimalTest() -> Void {
+        print("decimalTest \n")
         
         let arr: [KMNumber] = [KMNumber("100"), KMNumber("100.12"), KMNumber("100.125"), KMNumber("100.100000012345312")]
         
         arr.forEach { (number) in
             var temp = number
             temp.decimalFormatter(2, mode: .plain)
+            print(temp)
+        }
+    }
+    
+    func trimTailTest() -> Void {
+        print("trimTailTest \n")
+        
+        let arr: [KMNumber] = [KMNumber("100"), KMNumber("100."), KMNumber("100.120"), KMNumber("100.1000000")]
+        arr.forEach { (number) in
+            var temp = number
+            temp.trimTailZero()
             print(temp)
         }
     }

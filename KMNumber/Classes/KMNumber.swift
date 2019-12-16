@@ -9,6 +9,7 @@ import Foundation
 
 public protocol KMNumberDecimalFormatter {
     mutating func decimalFormatter(_ decimal: Int, mode: NSDecimalNumber.RoundingMode) -> Void
+    mutating func trimTailZero() -> Void
 }
 
 public struct KMNumber {
@@ -150,6 +151,26 @@ extension KMNumber: KMNumberDecimalFormatter {
             tempValue.append(String(repeating: "0", count: decimal))
         }
         _value = tempValue
+    }
+    
+    /// 去除小数尾部多余的0
+    mutating public func trimTailZero() -> Void {
+        var tempValue = _value
+        if tempValue.isEmpty {
+            return
+        }
+        
+        if tempValue.contains(".") {
+            if tempValue.hasSuffix("0") || tempValue.hasSuffix(".") {
+                if let stopIndex = tempValue.index(tempValue.endIndex, offsetBy: -1, limitedBy: tempValue.startIndex) {
+                    tempValue = String(tempValue[tempValue.startIndex..<stopIndex])
+                    _value = tempValue
+                    if tempValue.hasSuffix("0") {
+                        trimTailZero()
+                    }
+                }
+            }
+        }
     }
 }
 
