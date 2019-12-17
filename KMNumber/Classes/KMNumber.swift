@@ -266,7 +266,6 @@ fileprivate extension String {
     
     private func calculateResultValid() -> String {
         if self == "NaN" {
-            debugPrint("calculate error - NaN")
             return "0"
         } else {
             return self
