@@ -109,6 +109,7 @@ extension KMNumber {
         }
         
         var result = KMNumber(newValue)
+        result.trimTailZero()
         if decimalFormatter {
             result.decimalFormatter(decimal)
         }
