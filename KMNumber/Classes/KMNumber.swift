@@ -26,7 +26,9 @@ public struct KMNumber {
     
     private var _value: String
     public init(_ value: String) {
-        _value = value.withoutSpacesAndNewLines
+
+        let decimalNumber = NSDecimalNumber(string: value.withoutSpacesAndNewLines)
+        _value = decimalNumber.stringValue
     }
 }
 
@@ -127,15 +129,11 @@ extension KMNumber: KMNumberDecimalFormatter {
     
     /// 精度格式化，精度不足补0
     mutating public func decimalFormatter(_ decimal: Int, mode: NSDecimalNumber.RoundingMode = .down) {
-        var decimal = decimal
         
-        if decimal < 0 {
-            decimal = 0
-        }
-        var tempValue = _value
-        if tempValue.isEmpty {
+        if decimal < 0 || _value.isEmpty {
             return
         }
+        var tempValue = _value
 
         if let dotIndex = tempValue.firstIndex(of: ".") {
             if let startIndex = tempValue.index(dotIndex, offsetBy: 1, limitedBy: tempValue.endIndex) {
@@ -148,8 +146,10 @@ extension KMNumber: KMNumberDecimalFormatter {
                 }
             }
         } else {
-            tempValue.append(".")
-            tempValue.append(String(repeating: "0", count: decimal))
+            if decimal > 0 {
+                tempValue.append(".")
+                tempValue.append(String(repeating: "0", count: decimal))
+            }
         }
         _value = tempValue
     }

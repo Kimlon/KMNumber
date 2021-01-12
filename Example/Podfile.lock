@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - KMNumber (0.1.2)
+  - KMNumber (0.1.6)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  KMNumber: fb394da82489bc9c66c17ca1c498dfb15caab5ef
+  KMNumber: 58761a4e6cb87eb65d22c29d0cd614c1ad4ad929
 
 PODFILE CHECKSUM: d5a4e5c9a8e93b9f6dac5f9b08701cea4e4f6ba5
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

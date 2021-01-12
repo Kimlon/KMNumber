@@ -79,6 +79,14 @@ class ViewController: UIViewController {
          30.3060606060606060606060606060606060606
          30.3060606061
          */
+
+        let n5 = KMNumber("3.88e-06")
+        let result5 = n5.calculate(operator: .multiply, aNumber: KMNumber("-0.000001"))
+        print(result5)
+
+        var n6 = KMNumber("0.")
+        n6.decimalFormatter(0)
+        print(n6.value)
     }
     
     func adnormalCalculate() -> Void {
