@@ -26,9 +26,7 @@ public struct KMNumber {
     
     private var _value: String
     public init(_ value: String) {
-
-        let decimalNumber = NSDecimalNumber(string: value.withoutSpacesAndNewLines)
-        _value = decimalNumber.stringValue
+        _value = NSDecimalNumber(string: value.withoutSpacesAndNewLines).stringValue
     }
 }
 
